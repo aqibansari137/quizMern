@@ -39,7 +39,7 @@ class Quiz extends Component {
   }
   getQuiz = async () => {
     try {
-      const data = await fetch(`http://localhost:8000/get`);
+      const data = await fetch(`/get`);
       if (data.status === 200) {
         const resp = await data.json();
         console.log(resp);

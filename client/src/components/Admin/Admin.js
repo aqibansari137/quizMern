@@ -32,7 +32,7 @@ class Admin extends Component {
   }
   getQuiz = async () => {
     try {
-      const data = await fetch(`http://localhost:8000/get`);
+      const data = await fetch(`/get`);
       if (data.status === 200) {
         const resp = await data.json();
         console.log(resp);
@@ -58,7 +58,7 @@ class Admin extends Component {
 
   addQuiz = async () => {
     try {
-      const data = await fetch(`http://localhost:8000/add`, {
+      const data = await fetch(`/add`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(this.state.quiz),
@@ -86,7 +86,7 @@ class Admin extends Component {
   };
   deleteQuiz = async (id) => {
     try {
-      const data = await fetch(`http://localhost:8000/delete/${id}`, {
+      const data = await fetch(`/delete/${id}`, {
         method: "delete",
         headers: { "Content-Type": "application/json" },
       });
@@ -111,7 +111,7 @@ class Admin extends Component {
   updateQuiz = async () => {
     try {
       const { _id, ques, a1, a2, a3, a4, correct } = this.state.quiz;
-      const data = await fetch(`http://localhost:8000/update/${_id}`, {
+      const data = await fetch(`/update/${_id}`, {
         method: "put",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ques, a1, a2, a3, a4, correct }),
