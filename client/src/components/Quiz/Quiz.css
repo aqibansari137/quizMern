@@ -1,0 +1,149 @@
+.quiz {
+  border-radius: 15px;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 17px;
+  border: 1px solid black;
+  background-color: seashell;
+  color: black;
+}
+
+/* .quiz {
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 22px;
+  font-size: 33px;
+  width: 700px;
+  border: 1px solid black;
+  background-color: seashell;
+  color: black;
+} */
+.quiz button {
+  padding: 10px;
+  float: right;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 17px;
+}
+.headers {
+  width: 100%;
+  background-color: cadetblue;
+  position: absolute;
+  border: 1px solid;
+  top: 0;
+  left: 0;
+  color: linen;
+  text-align: left;
+  padding-left: 10px;
+}
+.admin {
+  font-size: 25px;
+  padding: 10px;
+  /* float: right; */
+  margin: 15px;
+  position: absolute;
+  right: 10px;
+  top: 2px;
+}
+.quesHead {
+  background-color: antiquewhite;
+  padding: 16px 10px;
+  border: 1px solid black;
+}
+.answerSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.answerSection > button {
+  border: 1px solid;
+  padding: 10px 10px;
+  /* background-color: white; */
+  margin-top: 20px;
+  box-shadow: 0 0 3px 0;
+  text-align: left;
+  font-size: 17px;
+}
+
+.answerSection > button:disabled {
+  color: black;
+}
+
+.answerCorrect {
+  background-color: lightgreen;
+}
+.answerIncorrect {
+  background-color: rgb(255, 46, 46);
+}
+.answerSelected {
+  background-color: rgb(190, 190, 190);
+}
+.scores {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  background-color: white;
+}
+.scoreHead {
+  border-radius: 15px 15px 0 0;
+  background: cadetblue;
+  padding: 20px;
+}
+.scoreBody {
+  font-size: 20px;
+  padding: 0 30px;
+  border: 1px solid;
+  line-height: 0.8;
+  width: 300px;
+  margin: 15px 20px;
+}
+.scoreBody p {
+  font-size: 25px;
+  font-weight: 600;
+}
+.scores img {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  width: 200px;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  border-radius: 100%;
+  width: 48px !important;
+  border: none;
+  font-size: 24px !important;
+  box-shadow: 0 0 5px 0;
+  z-index: 1;
+}
+@media (min-width: 600px) {
+  .quiz,
+  .quiz button {
+    font-size: 25px;
+  }
+  .headers {
+    text-align: center;
+  }
+}
+@media (min-width: 1000px) {
+  .quiz,
+  .quiz button {
+    font-size: 33px;
+  }
+  .headers {
+    text-align: center;
+  }
+}

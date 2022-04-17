@@ -1,0 +1,96 @@
+.panel {
+  border: 1px solid black;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.panel button {
+  padding: 10px;
+  margin: 15px 0;
+  width: 200px;
+  font-size: 20px;
+}
+
+.insert {
+  border: 1px solid black;
+  width: 75%;
+  position: relative;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 40px;
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 15px;
+}
+.insert > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 15px;
+  border: 1px solid darkgoldenrod;
+  background-color: floralwhite;
+}
+.insert input {
+  font-size: 25px;
+  width: 97%;
+}
+.insert button {
+  width: 100%;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.display {
+  display: grid;
+}
+@media (min-width: 600px) {
+  .display {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .display {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  border: 1px solid black;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+}
+.cardFooter {
+  display: flex;
+}
+.cardFooter button {
+  padding: 10px;
+  width: 100%;
+  font-size: 18px;
+}
+.cardHead {
+  background-color: antiquewhite;
+  height: auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  border-bottom: none;
+}
+.cardBody {
+  border: 1px solid;
+}
+.cardBody p {
+  margin: 0;
+  background: floralwhite;
+  padding: 10px 15px;
+  border: 1px solid darkgoldenrod;
+}
