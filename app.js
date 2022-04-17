@@ -11,6 +11,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(router);
 
+app.use(express.static(path.join(__dirname, "client", "build")));
+dotenv.config({ path: "./config.env" });
+
 const PORT = process.env.PORT || 8000;
 
 if ((process.env.NODE_ENV = "production")) {
